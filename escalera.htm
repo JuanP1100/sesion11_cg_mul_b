@@ -39,12 +39,12 @@ function init() {
     document.body.appendChild(renderer.domElement);
     scene = new THREE.Scene();
     var arrCube = [];
-    var c = 3; //Se agrega una variable "c" para elegir la cantidad de cubos que se muestran en pantalla
+    var c = 2; //Se agrega una variable "c" para elegir la cantidad de cubos que se muestran en pantalla
     var t = 1; //se agrega una variable "t" para elegir el tamaño de los cubos
     for (var i = 0; i < c; i++) { //La variable "c" determina hasta donde va el ciclo
         arrCube.push(cubo(t, t, t, 0, 0, 0, 'Phong', 'gray', false));
-	arrCube[i].geometry.translate((t)+(t*i), (t)+(t*i), t) /*Se aplica el metodo de traslacion en donde "t" se multipica y se suma 
-        por el ciclo for y asi en cada x,y,z va cambiando la posicion*/
+	arrCube[i].geometry.translate((t)+(t*i), (t)+(t*i), t) /*Se aplica el metodo de traslacion en donde "t" se multipica y luego se suma 
+        por el ciclo for y asi en cada x, y que varia por el valor de "i" dara la siguiente posicion de la cantidad de cubos "c"*/
     }
 
 
